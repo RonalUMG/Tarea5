@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <META charset="utf-8" />
+        <title> Mi primer fomulario</title>
+        <meta name="autor" content="Ronal Salguero" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+        
+    </head>
+
+    <Body>
+        <div class="column-row padding-3 margin-2 width-2">
+            <form method="GET" enctype="application/x-www-form-urlencoded"
+            action="/noexiste.html">
+            <div class="grid-container">
+                <div class="medium-6 cell">
+                    <p class="text-center callout secondary">
+                        <label>Nombre
+                            <input type="text" name="nombre_cliente" placeholder="Nombre Completo" class="callout primary" >
+                        </label>
+                    </p>
+                </div>
+                <div class="medimum-6 cell">
+                    <p class="text-center callout secondary">
+                        <label>Email
+                            <input type="email" name="direccion_correo" required placeholder="Email" class="callout primary">
+                        </label>
+                    </p>  
+                </div>
+                <div class="medium-6 cell">
+                    <p class="text-center callout secondary">
+                        <label>Telefono
+                            <input type="tel" name="numero_telefono" required placeholder="Telefono" class="callout primary">
+                        </label>
+                    </p> 
+                </div>
+            </div>
+            <div class="grid-container">
+                
+                    <div class="callout">
+                        <legend> Que taxi quiere?</legend>
+                        <p>
+                            <label>
+                                <input type="radio" name="taxi" required value="Car">
+                                Carrito
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="radio" name="taxi" required value="van">
+                                Suv
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="radio" name="taxi" required value="Tuktuk">
+                                tuktuk
+                            </label>
+                    </div>
+                   
+                </fieldset> 
+                
+                <fieldset class="callout fieldset large-5 cell">
+                    <legend> Extras </legend>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="extras" value="baby">
+                                Silla de Bebe
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="extras" value="musica">
+                                No Regueton
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" name="extras" value="baby">
+                                Silla de Ruedas
+                            </label>
+                        </p>
+                   
+                </fieldset>
+               
+                <fieldset class="large-5 cell">
+                
+                <p class="text-center">
+                    <label>Dia y Hora
+                    <input type="datetime-local" name="fecha_hora" required class="callout-small">
+                    </label>
+                </p>
+                <p class="text-center">
+                    <label> Lugar para recojer
+                        <select id="pickup_place" name="pickup_place" class="callout-small">
+                            <option value="" selected="selected"> Seleccione Opcion</option>
+                            <option value="Oficina">Oficina</option>
+                            <option value="Feria">La Feria</option>
+                            <option value="La_U">La Universidad</option>
+                            <option value="No_se">Le digo al cacho</option>
+                        </select>
+                    </label>
+                </p>
+    
+                <p class="text-center">
+                    <labe> Dejar en:
+                    <input type="text" name="dejar_en" required list="destino">
+                    </labe>
+                <datalist id="destino" class="callout">
+                    <option value="Aeropuerto"></option>
+                    <option value="Playa"></option>
+                    <option value="La Biblioteca"></option>
+                </datalist>
+                </p>
+    
+                <p class="text-center">
+                    <label> Intrucciones especiales
+                        <textarea name="comentarios" maxlength=""500 placeholder="None"></textarea>
+                    </label>
+                </p>
+                <div class="padding-3">
+                    <p>
+                        <button class="button rounded bordered shadow success float-center callout "> Hacer Cita </button>
+                    </p>
+                </div>
+                
+    
+        </div>
+            </div>
+               
+               
+       
+        
+      
+    </Body>
+</html>

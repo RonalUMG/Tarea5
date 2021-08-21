@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <META charset="utf-8" />
+        <title> Mi primer fomulario</title>
+        <meta name="autor" content="Ronal Salguero" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+        <style>
+            .degraded {
+                color: red;
+            }
+        
+                .degraded + span {
+                    color: red;
+                }
+        
+            .green {
+                color: green;
+            }
+        
+                .green + span {
+                    color: green;
+                }
+             body {
+            color: #526066;
+            }
+            
+        </style>
+
+    </head>
+    <Body class="body">
+        <form  class="pure-form pure-form-stacked degraded" method="GET" enctype="application/x-www-form-urlencoded"
+        action="/noexiste.html">
+            <p class="">
+                <label>Nombre
+                    <input  class="pure-input-rounded"type="text" name="nombre_cliente" required placeholder="Nombre Completo">
+                </label>
+            </p>
+            <p>
+                <label>Email
+                    <input class="pure-input-rounded" type="email" name="direccion_correo" required placeholder="Email">
+                    <span class="pure-form-message">Esta es informacion requerida.</span>
+                </label>
+            </p>  
+            <p>
+                <label>Telefono
+                    <input class="pure-input-rounded" type="tel" name="numero_telefono" required placeholder="Telefono">
+                </label>
+            </p> 
+            <fieldset class="green">
+                <legend> Que taxi quiere?</legend>
+                <p>
+                    <label class="pure-radio">
+                        <input type="radio" name="taxi" required value="Car">
+                        Carrito
+                    </label>
+                </p>
+                <p>
+                    <label class="pure-radio">
+                        <input type="radio" name="taxi" required value="van">
+                        Suv
+                    </label>
+                </p>
+                <p>
+                    <label class="pure-radio">
+                        <input type="radio" name="taxi" required value="Tuktuk">
+                        tuktuk
+                    </label>
+            </fieldset> 
+            
+            <fieldset class="green">
+                <legend> Extras </legend>
+                    <p>
+                        <label class="pure-checkbox">
+                            <input type="checkbox" name="extras" value="baby">
+                            Silla de Bebe
+                        </label>
+                    </p>
+                    <p>
+                        <label class="pure-checkbox">
+                            <input type="checkbox" name="extras" value="musica">
+                            No Regueton
+                        </label>
+                    </p>
+                    <p>
+                        <label class="pure-checkbox">
+                            <input type="checkbox" name="extras" value="baby">
+                            Silla de Ruedas
+                        </label>
+                    </p>
+               
+            </fieldset>
+            <p>
+                <label>Dia y Hora
+                <input type="datetime-local" name="fecha_hora" required>
+                </label>
+            </p>
+            <p>
+                <label> Lugar para recojer
+                    <select id="pickup_place" name="pickup_place">
+                        <option value="" selected="selected"> Seleccione Opcion</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="Feria">La Feria</option>
+                        <option value="La_U">La Universidad</option>
+                        <option value="No_se">Le digo al cacho</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <labe> Dejar en:
+                <input type="text" name="dejar_en" required list="destino">
+                </labe>
+            <datalist id="destino">
+                <option value="Aeropuerto"></option>
+                <option value="Playa"></option>
+                <option value="La Biblioteca"></option>
+            </datalist>
+            </p>
+
+            <p>
+                <label> Intrucciones especiales
+                    <textarea name="comentarios" maxlength=""500></textarea>
+                </label>
+            </p>
+            <p>
+                <button class="pure-button pure-button-primary "> Hacer Cita </button>
+
+        </form>
+        
+        
+      
+    </Body>
+</html>

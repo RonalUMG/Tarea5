@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <META charset="utf-8" />
+        <title> Mi primer fomulario</title>
+        <meta name="autor" content="Ronal Salguero" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    </head>
+    <Body>
+        <div class="container is-widescreen is-family-monospace">
+            <form class="box" method="GET" enctype="application/x-www-form-urlencoded"
+            action="/noexiste.html">
+                <p class="control">
+                    <label>Nombre
+                        <input class="input is-success is-rounded is-normal" placeholder="Nombre Completo" type="text" name="nombre_cliente" required>
+                    </label>
+                </p>
+                <p class="control">
+                    <label>Email
+                        <input class="input is-success is-rounded is-normal" placeholder="Email" type="email" name="direccion_correo" required>
+                    </label>
+                </p>  
+                <p class="control">
+                    <label>Telefono
+                        <input class="input is-success is-rounded is-normal" placeholder="Telefono" type="tel" name="numero_telefono" required>
+                    </label>
+                </p> 
+                <fieldset class="box">
+                    <div class="control">
+                        <legend> Que taxi quiere?</legend>
+                        <p>
+                            <label class="radio">
+                                <input type="radio" name="taxi" required value="Car">
+                                Carrito
+                            </label>
+                        </p>
+                        <p>
+                            <label class="radio">
+                                <input type="radio" name="taxi" required value="van">
+                                Suv
+                            </label>
+                        </p>
+                        <p>
+                            <label class="radio">
+                                <input type="radio" name="taxi" required value="Tuktuk">
+                                tuktuk
+                            </label>
+                    </div>
+                   
+                </fieldset> 
+                
+                <fieldset class="box is-hovered-shadow">
+                    <legend> Extras </legend>
+                        <p>
+                            <label class="checkbox">
+                                <input type="checkbox" name="extras" value="baby">
+                                Silla de Bebe
+                            </label>
+                        </p>
+                        <p>
+                            <label class="checkbox">
+                                <input type="checkbox" name="extras" value="musica">
+                                No Regueton
+                            </label>
+                        </p>
+                        <p>
+                            <label class="checkbox">
+                                <input type="checkbox" name="extras" value="baby">
+                                Silla de Ruedas
+                            </label>
+                        </p>
+                   
+                </fieldset>
+                <p>
+                    <label>Dia y Hora
+                    <input type="datetime-local" name="fecha_hora" required>
+                    </label>
+                </p>
+                <p class="select is-multiple is-primary">
+                    <label> Lugar para recojer
+                        <select id="pickup_place" name="pickup_place">
+                            <option value="" selected="selected"> Seleccione Opcion</option>
+                            <option value="Oficina">Oficina</option>
+                            <option value="Feria">La Feria</option>
+                            <option value="La_U">La Universidad</option>
+                            <option value="No_se">Le digo al cacho</option>
+                        </select>
+                    </label>
+                </p>
+    
+                <p>
+                    <labe> Dejar en:
+                    <input type="text" name="dejar_en" required list="destino">
+                    </labe>
+                <datalist id="destino" class="select is-primary">
+                    <option value="Aeropuerto"></option>
+                    <option value="Playa"></option>
+                    <option value="La Biblioteca"></option>
+                </datalist>
+                </p>
+    
+                <p>
+                    <label> Intrucciones especiales
+                        <textarea rows="10" class="textarea is-primary is-small has-fixed-size is-hovered" name="comentarios" maxlength=""500></textarea>
+                    </label>
+                </p>
+                <p>
+                    <button class=" button is-info"> Hacer Cita </button>
+    
+            </form>
+        </div>
+       
+
+        
+      
+    </Body>
+</html>

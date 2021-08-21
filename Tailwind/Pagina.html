@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <META charset="utf-8" />
+        <title> Mi primer fomulario</title>
+        <meta name="autor" content="Ronal Salguero" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        
+    </head>
+    <Body class="container mx-auto font-mono bg-purple-600 bg-opacity-25">
+        <form method="GET" enctype="application/x-www-form-urlencoded"
+        action="/noexiste.html">
+            <p class="py-4">
+                <label>Nombre
+                    <input type="text" name="nombre_cliente" required class="border-2 border-black border-opacity-100 mx-auto px-2 ">
+                </label>
+            </p>
+            <p class="py-4">
+                <label>Email
+                    <input type="email" name="direccion_correo" required class="border-2 border-black border-opacity-100 mx-auto px-2">
+                </label>
+            </p>  
+            <p class="py-4">
+                <label>Telefono
+                    <input type="tel" name="numero_telefono" required class="border-2 border-black border-opacity-100 mx-auto px-2">
+                </label>
+            </p> 
+            <fieldset class="border-4 border-black border-opacity-100 border-double py-4 px-4">
+                <legend> Que taxi quiere?</legend>
+                <p>
+                    <label>
+                        <input type="radio" name="taxi" required value="Car">
+                        Carrito
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="taxi" required value="van">
+                        Suv
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="taxi" required value="Tuktuk">
+                        tuktuk
+                    </label>
+            </fieldset> 
+            
+            <fieldset class="border-4 border-black border-opacity-100 border-double py-4 px-4">
+                <legend> Extras </legend>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="extras" value="baby">
+                            Silla de Bebe
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="extras" value="musica">
+                            No Regueton
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="extras" value="baby">
+                            Silla de Ruedas
+                        </label>
+                    </p>
+               
+            </fieldset>
+            <p>
+                <label>Dia y Hora
+                <input type="datetime-local" name="fecha_hora" required class="border-2 border-black border-opacity-75 mx-auto">
+                </label>
+            </p>
+            <p>
+                <label> Lugar para recojer
+                    <select id="pickup_place" name="pickup_place" class="border-2 border-black border-opacity-75 mx-auto">
+                        <option value="" selected="selected"> Seleccione Opcion</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="Feria">La Feria</option>
+                        <option value="La_U">La Universidad</option>
+                        <option value="No_se">Le digo al cacho</option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <labe> Dejar en:
+                <input type="text" name="dejar_en" required list="destino" class="border-2 border-black border-opacity-75 mx-auto py-2 px-4">
+                </labe>
+            <datalist id="destino">
+                <option value="Aeropuerto"></option>
+                <option value="Playa"></option>
+                <option value="La Biblioteca"></option>
+            </datalist>
+            </p>
+
+            <p>
+                <label> Intrucciones especiales
+                    <textarea name="comentarios" maxlength=""500 class="border-2 border-black border-opacity-75 text-justify">
+
+                    </textarea>
+                </label>
+            </p>
+            <p>
+                <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded shadow-inner"> 
+                    Hacer Cita 
+                </button>
+
+        </form>
+
+        
+      
+    </Body>
+</html>
